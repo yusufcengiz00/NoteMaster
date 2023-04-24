@@ -66,11 +66,15 @@ namespace NoteMaster
 
         private async void LoginBtn_Click(object sender, EventArgs e)
         {
+      
             try
             {
+                Note form1 = new Note();
+                form1.Show();
+
                 UserCredential userCredential = await client.SignInWithEmailAndPasswordAsync(this.loginUC.emailTxt.Text.Trim(), this.loginUC.passwordTxt.Text.Trim());
                 MessageBox.Show("Giriş Başarılı!");
-
+              
             }
             catch(Exception exc) { 
                MessageBox.Show("HATA: "+exc.Message);
