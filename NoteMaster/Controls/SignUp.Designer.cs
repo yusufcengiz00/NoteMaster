@@ -36,8 +36,8 @@
             this.email2Btn = new System.Windows.Forms.Label();
             this.AdBtn = new System.Windows.Forms.Label();
             this.SoyadBtn = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.adTxt = new System.Windows.Forms.TextBox();
+            this.soyadTxt = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // SignUpBtn
@@ -120,30 +120,30 @@
             this.SoyadBtn.TabIndex = 13;
             this.SoyadBtn.Text = "Soyad :";
             // 
-            // textBox1
+            // adTxt
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.adTxt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(109, 36);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(220, 22);
-            this.textBox1.TabIndex = 15;
+            this.adTxt.Location = new System.Drawing.Point(109, 36);
+            this.adTxt.Name = "adTxt";
+            this.adTxt.Size = new System.Drawing.Size(220, 22);
+            this.adTxt.TabIndex = 15;
             // 
-            // textBox3
+            // soyadTxt
             // 
-            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.soyadTxt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox3.Location = new System.Drawing.Point(107, 69);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(220, 22);
-            this.textBox3.TabIndex = 18;
+            this.soyadTxt.Location = new System.Drawing.Point(107, 69);
+            this.soyadTxt.Name = "soyadTxt";
+            this.soyadTxt.Size = new System.Drawing.Size(220, 22);
+            this.soyadTxt.TabIndex = 18;
             // 
             // SignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.soyadTxt);
+            this.Controls.Add(this.adTxt);
             this.Controls.Add(this.SoyadBtn);
             this.Controls.Add(this.AdBtn);
             this.Controls.Add(this.SignUpBtn);
@@ -169,7 +169,7 @@
         public System.Windows.Forms.Button SignUpBtn;
         public System.Windows.Forms.TextBox passwordTxt;
         public System.Windows.Forms.TextBox emailTxt;
-        public System.Windows.Forms.TextBox textBox1;
-        public System.Windows.Forms.TextBox textBox3;
+        public System.Windows.Forms.TextBox adTxt;
+        public System.Windows.Forms.TextBox soyadTxt;
     }
 }

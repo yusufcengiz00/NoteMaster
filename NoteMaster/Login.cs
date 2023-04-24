@@ -50,8 +50,13 @@ namespace NoteMaster
         {
             try
             {
+                if (string.IsNullOrWhiteSpace(this.signUp.adTxt.Text) || string.IsNullOrWhiteSpace(this.signUp.soyadTxt.Text))
+                {
+                    throw new Exception("Ad veya Soyad Alanı Boş Bırakılamaz!");
+                }
+
                 UserCredential userCredential = await client.CreateUserWithEmailAndPasswordAsync(this.signUp.emailTxt.Text.Trim(), this.signUp.passwordTxt.Text.Trim());
-                MessageBox.Show("Kayıt Başarılı,Giriş yapabilirsiniz!");
+                MessageBox.Show("Kayıt Başarılı, Lütfen Giriş Yapınız.");
 
             }
             catch (Exception exc)
@@ -69,15 +74,16 @@ namespace NoteMaster
       
             try
             {
+    
+                UserCredential userCredential = await client.SignInWithEmailAndPasswordAsync(this.loginUC.emailTxt.Text.Trim(), this.loginUC.passwordTxt.Text.Trim());
+                // MessageBox.Show("Giriş Başarılı!");
                 Note form1 = new Note();
                 form1.Show();
 
-                UserCredential userCredential = await client.SignInWithEmailAndPasswordAsync(this.loginUC.emailTxt.Text.Trim(), this.loginUC.passwordTxt.Text.Trim());
-                MessageBox.Show("Giriş Başarılı!");
-              
             }
             catch(Exception exc) { 
-               MessageBox.Show("HATA: "+exc.Message);
+               MessageBox.Show("Mail veya Şifre Yanlış! Tekrar Deneyiniz.");
+
             }
             finally
             {
