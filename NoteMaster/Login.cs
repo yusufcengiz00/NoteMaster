@@ -74,7 +74,6 @@ namespace NoteMaster
       
             try
             {
-    
                 UserCredential userCredential = await client.SignInWithEmailAndPasswordAsync(this.loginUC.emailTxt.Text.Trim(), this.loginUC.passwordTxt.Text.Trim());
                 // MessageBox.Show("Giriş Başarılı!");
                 Note form1 = new Note();
@@ -100,6 +99,7 @@ namespace NoteMaster
         {
             panel1.Controls.Clear();
             panel1.Controls.Add(signUp);
+          
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
