@@ -1,14 +1,16 @@
 # NoteMaster
 
-Kullanıcılar bu uygulamayı kullanarak not alabilir, notlarını depolayabilir ve istedikleri zaman tekrar görüntüleyebilirler. Kullanıcıların uygulamayı kullanabilmeleri için giriş yapmaları zorunludur.
+Kullanıcılar bu uygulamayı kullanarak not alabilir, notlarını kaydedebilir ve tekrar görüntüleyebilirler. Kullanıcıların uygulamayı kullanabilmeleri için giriş yapmaları zorunludur.
 
 # Proje Bağımlılıkları:
 - FirebaseAuthentication.net
+İlgili bağımlılıklara aşağıdaki bağlantıdan ulaşabilirsiniz.
+https://github.com/step-up-labs/firebase-authentication-dotnet
 
 
 ## Geliştirici:
 
-- [@yusufcengiz00](https://github.com/yusufcengiz00) Uygulamanın bütünü bana aittir.
+- [@yusufcengiz00](https://github.com/yusufcengiz00) 
     - **Numara:** <2107231012>
     - **Ad-Soyad:** <Yusuf CENGİZ>
 
