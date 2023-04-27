@@ -39,9 +39,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(30, 35);
+            this.label1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(41, 68);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 16);
+            this.label1.Size = new System.Drawing.Size(65, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "E Mail :";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -49,9 +51,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(30, 79);
+            this.label2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Location = new System.Drawing.Point(53, 95);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 16);
+            this.label2.Size = new System.Drawing.Size(53, 18);
             this.label2.TabIndex = 1;
             this.label2.Text = "Şifre :";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -60,9 +64,10 @@
             // 
             this.emailTxt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.emailTxt.Location = new System.Drawing.Point(86, 32);
+            this.emailTxt.BackColor = System.Drawing.SystemColors.Window;
+            this.emailTxt.Location = new System.Drawing.Point(112, 67);
             this.emailTxt.Name = "emailTxt";
-            this.emailTxt.Size = new System.Drawing.Size(250, 22);
+            this.emailTxt.Size = new System.Drawing.Size(267, 22);
             this.emailTxt.TabIndex = 2;
             this.emailTxt.TextChanged += new System.EventHandler(this.emailTxt_TextChanged);
             // 
@@ -70,10 +75,11 @@
             // 
             this.passwordTxt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.passwordTxt.Location = new System.Drawing.Point(86, 73);
+            this.passwordTxt.BackColor = System.Drawing.SystemColors.Window;
+            this.passwordTxt.Location = new System.Drawing.Point(112, 95);
             this.passwordTxt.Name = "passwordTxt";
             this.passwordTxt.PasswordChar = '*';
-            this.passwordTxt.Size = new System.Drawing.Size(250, 22);
+            this.passwordTxt.Size = new System.Drawing.Size(267, 22);
             this.passwordTxt.TabIndex = 3;
             this.passwordTxt.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
@@ -81,29 +87,34 @@
             // 
             this.gösterBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.gösterBtn.AutoSize = true;
-            this.gösterBtn.Location = new System.Drawing.Point(351, 75);
+            this.gösterBtn.BackColor = System.Drawing.Color.Gainsboro;
+            this.gösterBtn.Location = new System.Drawing.Point(398, 97);
             this.gösterBtn.Name = "gösterBtn";
             this.gösterBtn.Size = new System.Drawing.Size(69, 20);
             this.gösterBtn.TabIndex = 4;
             this.gösterBtn.Text = "Göster";
-            this.gösterBtn.UseVisualStyleBackColor = true;
+            this.gösterBtn.UseVisualStyleBackColor = false;
             this.gösterBtn.CheckedChanged += new System.EventHandler(this.gösterBtn_CheckedChanged);
             // 
             // LoginBtn
             // 
+            this.LoginBtn.BackColor = System.Drawing.SystemColors.Info;
             this.LoginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.LoginBtn.Location = new System.Drawing.Point(147, 132);
+            this.LoginBtn.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoginBtn.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.LoginBtn.Location = new System.Drawing.Point(259, 134);
             this.LoginBtn.Name = "LoginBtn";
-            this.LoginBtn.Size = new System.Drawing.Size(99, 39);
+            this.LoginBtn.Size = new System.Drawing.Size(120, 32);
             this.LoginBtn.TabIndex = 5;
             this.LoginBtn.Text = "Giriş Yap";
-            this.LoginBtn.UseVisualStyleBackColor = true;
+            this.LoginBtn.UseVisualStyleBackColor = false;
             this.LoginBtn.Click += new System.EventHandler(this.button1_Click);
             // 
             // LoginUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Gainsboro;
             this.Controls.Add(this.LoginBtn);
             this.Controls.Add(this.gösterBtn);
             this.Controls.Add(this.passwordTxt);
@@ -111,7 +122,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "LoginUC";
-            this.Size = new System.Drawing.Size(475, 236);
+            this.Size = new System.Drawing.Size(601, 343);
             this.ResumeLayout(false);
             this.PerformLayout();
 

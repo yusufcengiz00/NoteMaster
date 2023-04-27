@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Note));
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabControl = new System.Windows.Forms.TabControl();
@@ -82,7 +81,6 @@
             this.toolStripContainer1.LeftToolStripPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
-            this.statusStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
@@ -98,16 +96,18 @@
             // 
             // toolStripContainer1.ContentPanel
             // 
+            this.toolStripContainer1.ContentPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.toolStripContainer1.ContentPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.toolStripContainer1.ContentPanel.Controls.Add(this.tabControl2);
             this.toolStripContainer1.ContentPanel.Controls.Add(this.textBox1);
             this.toolStripContainer1.ContentPanel.Controls.Add(this.tabControl);
             this.toolStripContainer1.ContentPanel.Controls.Add(this.tabControl1);
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(770, 361);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(770, 365);
             this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             // 
             // toolStripContainer1.LeftToolStripPanel
             // 
+            this.toolStripContainer1.LeftToolStripPanel.BackColor = System.Drawing.Color.Gainsboro;
             this.toolStripContainer1.LeftToolStripPanel.Controls.Add(this.toolStrip1);
             this.toolStripContainer1.Location = new System.Drawing.Point(0, 0);
             this.toolStripContainer1.Name = "toolStripContainer1";
@@ -118,42 +118,38 @@
             // 
             // toolStripContainer1.TopToolStripPanel
             // 
+            this.toolStripContainer1.TopToolStripPanel.BackColor = System.Drawing.Color.Gainsboro;
             this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.menuStrip1);
             this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.toolStrip2);
             // 
             // statusStrip1
             // 
+            this.statusStrip1.BackColor = System.Drawing.Color.Gainsboro;
             this.statusStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1});
             this.statusStrip1.Location = new System.Drawing.Point(0, 0);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(800, 26);
+            this.statusStrip1.Size = new System.Drawing.Size(800, 22);
             this.statusStrip1.TabIndex = 0;
-            // 
-            // toolStripStatusLabel1
-            // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(79, 20);
-            this.toolStripStatusLabel1.Text = "Karakter: 0";
             // 
             // tabControl2
             // 
+            this.tabControl2.Cursor = System.Windows.Forms.Cursors.SizeNS;
             this.tabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl2.Location = new System.Drawing.Point(0, 0);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(768, 359);
+            this.tabControl2.Size = new System.Drawing.Size(768, 363);
             this.tabControl2.TabIndex = 3;
             // 
             // textBox1
             // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.Menu;
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox1.Location = new System.Drawing.Point(0, 0);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(768, 359);
+            this.textBox1.Size = new System.Drawing.Size(768, 363);
             this.textBox1.TabIndex = 2;
             // 
             // tabControl
@@ -162,7 +158,7 @@
             this.tabControl.Location = new System.Drawing.Point(0, 0);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(768, 359);
+            this.tabControl.Size = new System.Drawing.Size(768, 363);
             this.tabControl.TabIndex = 1;
             // 
             // tabControl1
@@ -171,7 +167,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(768, 359);
+            this.tabControl1.Size = new System.Drawing.Size(768, 363);
             this.tabControl1.TabIndex = 0;
             // 
             // toolStrip1
@@ -193,6 +189,7 @@
             // 
             // removeToolStripButton1
             // 
+            this.removeToolStripButton1.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.removeToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.removeToolStripButton1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.removeToolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("removeToolStripButton1.Image")));
@@ -204,6 +201,7 @@
             // 
             // yeniToolStripButton
             // 
+            this.yeniToolStripButton.BackColor = System.Drawing.SystemColors.Info;
             this.yeniToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.yeniToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("yeniToolStripButton.Image")));
             this.yeniToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -214,6 +212,7 @@
             // 
             // açToolStripButton
             // 
+            this.açToolStripButton.BackColor = System.Drawing.SystemColors.Info;
             this.açToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.açToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("açToolStripButton.Image")));
             this.açToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -224,6 +223,7 @@
             // 
             // kaydetToolStripButton
             // 
+            this.kaydetToolStripButton.BackColor = System.Drawing.SystemColors.Info;
             this.kaydetToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.kaydetToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("kaydetToolStripButton.Image")));
             this.kaydetToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -244,6 +244,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.Gainsboro;
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -256,6 +257,7 @@
             // 
             // dosyaToolStripMenuItem
             // 
+            this.dosyaToolStripMenuItem.BackColor = System.Drawing.SystemColors.Info;
             this.dosyaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.yeniToolStripMenuItem,
             this.açToolStripMenuItem,
@@ -264,12 +266,14 @@
             this.farklıKaydetToolStripMenuItem,
             this.toolStripSeparator1,
             this.çıkışToolStripMenuItem});
+            this.dosyaToolStripMenuItem.Font = new System.Drawing.Font("Lucida Fax", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dosyaToolStripMenuItem.Name = "dosyaToolStripMenuItem";
-            this.dosyaToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
+            this.dosyaToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
             this.dosyaToolStripMenuItem.Text = "&Dosya";
             // 
             // yeniToolStripMenuItem
             // 
+            this.yeniToolStripMenuItem.BackColor = System.Drawing.SystemColors.Window;
             this.yeniToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("yeniToolStripMenuItem.Image")));
             this.yeniToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.yeniToolStripMenuItem.Name = "yeniToolStripMenuItem";
@@ -279,6 +283,7 @@
             // 
             // açToolStripMenuItem
             // 
+            this.açToolStripMenuItem.BackColor = System.Drawing.SystemColors.Window;
             this.açToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("açToolStripMenuItem.Image")));
             this.açToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.açToolStripMenuItem.Name = "açToolStripMenuItem";
@@ -293,6 +298,7 @@
             // 
             // kaydetToolStripMenuItem
             // 
+            this.kaydetToolStripMenuItem.BackColor = System.Drawing.SystemColors.Window;
             this.kaydetToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("kaydetToolStripMenuItem.Image")));
             this.kaydetToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.kaydetToolStripMenuItem.Name = "kaydetToolStripMenuItem";
@@ -302,6 +308,7 @@
             // 
             // farklıKaydetToolStripMenuItem
             // 
+            this.farklıKaydetToolStripMenuItem.BackColor = System.Drawing.SystemColors.Window;
             this.farklıKaydetToolStripMenuItem.Name = "farklıKaydetToolStripMenuItem";
             this.farklıKaydetToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.farklıKaydetToolStripMenuItem.Text = "&Farklı Kaydet";
@@ -314,6 +321,7 @@
             // 
             // çıkışToolStripMenuItem
             // 
+            this.çıkışToolStripMenuItem.BackColor = System.Drawing.SystemColors.Window;
             this.çıkışToolStripMenuItem.Name = "çıkışToolStripMenuItem";
             this.çıkışToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.çıkışToolStripMenuItem.Text = "Çı&kış";
@@ -343,6 +351,7 @@
             // 
             // toolStripButtonIncrease
             // 
+            this.toolStripButtonIncrease.BackColor = System.Drawing.SystemColors.Window;
             this.toolStripButtonIncrease.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.toolStripButtonIncrease.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.toolStripButtonIncrease.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonIncrease.Image")));
@@ -354,6 +363,7 @@
             // 
             // toolStripButtonDecrease
             // 
+            this.toolStripButtonDecrease.BackColor = System.Drawing.SystemColors.Window;
             this.toolStripButtonDecrease.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.toolStripButtonDecrease.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.toolStripButtonDecrease.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonDecrease.Image")));
@@ -433,6 +443,10 @@
             this.timer1.Enabled = true;
             this.timer1.Interval = 1;
             // 
+            // colorDialog1
+            // 
+            this.colorDialog1.Color = System.Drawing.SystemColors.ActiveCaption;
+            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -449,35 +463,35 @@
             // toolStripMenuItemkopyala
             // 
             this.toolStripMenuItemkopyala.Name = "toolStripMenuItemkopyala";
-            this.toolStripMenuItemkopyala.Size = new System.Drawing.Size(210, 24);
+            this.toolStripMenuItemkopyala.Size = new System.Drawing.Size(158, 24);
             this.toolStripMenuItemkopyala.Text = "Kopyala";
             this.toolStripMenuItemkopyala.Click += new System.EventHandler(this.toolStripMenuItemkopyala_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(210, 24);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(158, 24);
             this.toolStripMenuItem1.Text = "Yapıştır";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(210, 24);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(158, 24);
             this.toolStripMenuItem2.Text = "Kes";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(210, 24);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(158, 24);
             this.toolStripMenuItem3.Text = "Geri Al";
             this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(210, 24);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(158, 24);
             this.toolStripMenuItem4.Text = "Tümünü Seç";
             this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
             // 
@@ -485,6 +499,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.toolStripContainer1);
             this.MainMenuStrip = this.menuStrip1;
@@ -501,8 +516,6 @@
             this.toolStripContainer1.TopToolStripPanel.PerformLayout();
             this.toolStripContainer1.ResumeLayout(false);
             this.toolStripContainer1.PerformLayout();
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
@@ -534,7 +547,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripMenuItem hakkındaToolStripMenuItem;
         private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStrip toolStrip2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
         private System.Windows.Forms.ToolStripButton toolStripButtonIncrease;

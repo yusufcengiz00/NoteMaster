@@ -113,9 +113,6 @@ namespace NoteMaster
             panel1.Controls.Add(loginUC);
         }
 
-       
-  
-
         }
     
     }

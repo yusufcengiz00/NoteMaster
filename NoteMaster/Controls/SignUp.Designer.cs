@@ -42,52 +42,59 @@
             // 
             // SignUpBtn
             // 
+            this.SignUpBtn.BackColor = System.Drawing.SystemColors.Info;
             this.SignUpBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.SignUpBtn.Location = new System.Drawing.Point(159, 188);
+            this.SignUpBtn.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SignUpBtn.Location = new System.Drawing.Point(282, 181);
             this.SignUpBtn.Name = "SignUpBtn";
-            this.SignUpBtn.Size = new System.Drawing.Size(121, 47);
+            this.SignUpBtn.Size = new System.Drawing.Size(120, 32);
             this.SignUpBtn.TabIndex = 11;
             this.SignUpBtn.Text = "Üye Ol";
-            this.SignUpBtn.UseVisualStyleBackColor = true;
+            this.SignUpBtn.UseVisualStyleBackColor = false;
             // 
             // gösterBtn
             // 
             this.gösterBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.gösterBtn.AutoSize = true;
-            this.gösterBtn.Location = new System.Drawing.Point(353, 135);
+            this.gösterBtn.BackColor = System.Drawing.Color.Gainsboro;
+            this.gösterBtn.Location = new System.Drawing.Point(422, 153);
             this.gösterBtn.Name = "gösterBtn";
             this.gösterBtn.Size = new System.Drawing.Size(69, 20);
             this.gösterBtn.TabIndex = 10;
             this.gösterBtn.Text = "Göster";
-            this.gösterBtn.UseVisualStyleBackColor = true;
+            this.gösterBtn.UseVisualStyleBackColor = false;
             this.gösterBtn.CheckedChanged += new System.EventHandler(this.gösterBtn_CheckedChanged);
             // 
             // passwordTxt
             // 
             this.passwordTxt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.passwordTxt.Location = new System.Drawing.Point(109, 135);
+            this.passwordTxt.BackColor = System.Drawing.SystemColors.Window;
+            this.passwordTxt.Location = new System.Drawing.Point(104, 153);
             this.passwordTxt.Name = "passwordTxt";
             this.passwordTxt.PasswordChar = '*';
-            this.passwordTxt.Size = new System.Drawing.Size(220, 22);
+            this.passwordTxt.Size = new System.Drawing.Size(301, 22);
             this.passwordTxt.TabIndex = 9;
             // 
             // emailTxt
             // 
             this.emailTxt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.emailTxt.Location = new System.Drawing.Point(109, 97);
+            this.emailTxt.BackColor = System.Drawing.SystemColors.Window;
+            this.emailTxt.Location = new System.Drawing.Point(104, 125);
             this.emailTxt.Name = "emailTxt";
-            this.emailTxt.Size = new System.Drawing.Size(220, 22);
+            this.emailTxt.Size = new System.Drawing.Size(301, 22);
             this.emailTxt.TabIndex = 8;
             this.emailTxt.TextChanged += new System.EventHandler(this.emailTxt_TextChanged);
             // 
             // password2Btn
             // 
             this.password2Btn.AutoSize = true;
-            this.password2Btn.Location = new System.Drawing.Point(53, 141);
+            this.password2Btn.BackColor = System.Drawing.SystemColors.Window;
+            this.password2Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.password2Btn.Location = new System.Drawing.Point(33, 157);
             this.password2Btn.Name = "password2Btn";
-            this.password2Btn.Size = new System.Drawing.Size(40, 16);
+            this.password2Btn.Size = new System.Drawing.Size(53, 18);
             this.password2Btn.TabIndex = 7;
             this.password2Btn.Text = "Şifre :";
             this.password2Btn.Click += new System.EventHandler(this.label2_Click);
@@ -95,18 +102,22 @@
             // email2Btn
             // 
             this.email2Btn.AutoSize = true;
-            this.email2Btn.Location = new System.Drawing.Point(53, 103);
+            this.email2Btn.BackColor = System.Drawing.SystemColors.Window;
+            this.email2Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.email2Btn.Location = new System.Drawing.Point(21, 126);
             this.email2Btn.Name = "email2Btn";
-            this.email2Btn.Size = new System.Drawing.Size(50, 16);
+            this.email2Btn.Size = new System.Drawing.Size(65, 18);
             this.email2Btn.TabIndex = 6;
             this.email2Btn.Text = "E Mail :";
             // 
             // AdBtn
             // 
             this.AdBtn.AutoSize = true;
-            this.AdBtn.Location = new System.Drawing.Point(53, 36);
+            this.AdBtn.BackColor = System.Drawing.SystemColors.Window;
+            this.AdBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.AdBtn.Location = new System.Drawing.Point(49, 69);
             this.AdBtn.Name = "AdBtn";
-            this.AdBtn.Size = new System.Drawing.Size(30, 16);
+            this.AdBtn.Size = new System.Drawing.Size(37, 18);
             this.AdBtn.TabIndex = 12;
             this.AdBtn.Text = "Ad :";
             this.AdBtn.Click += new System.EventHandler(this.label3_Click);
@@ -114,9 +125,11 @@
             // SoyadBtn
             // 
             this.SoyadBtn.AutoSize = true;
-            this.SoyadBtn.Location = new System.Drawing.Point(53, 69);
+            this.SoyadBtn.BackColor = System.Drawing.SystemColors.Window;
+            this.SoyadBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.SoyadBtn.Location = new System.Drawing.Point(21, 97);
             this.SoyadBtn.Name = "SoyadBtn";
-            this.SoyadBtn.Size = new System.Drawing.Size(53, 16);
+            this.SoyadBtn.Size = new System.Drawing.Size(65, 18);
             this.SoyadBtn.TabIndex = 13;
             this.SoyadBtn.Text = "Soyad :";
             // 
@@ -124,24 +137,27 @@
             // 
             this.adTxt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.adTxt.Location = new System.Drawing.Point(109, 36);
+            this.adTxt.BackColor = System.Drawing.SystemColors.Window;
+            this.adTxt.Location = new System.Drawing.Point(104, 68);
             this.adTxt.Name = "adTxt";
-            this.adTxt.Size = new System.Drawing.Size(220, 22);
+            this.adTxt.Size = new System.Drawing.Size(301, 22);
             this.adTxt.TabIndex = 15;
             // 
             // soyadTxt
             // 
             this.soyadTxt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.soyadTxt.Location = new System.Drawing.Point(107, 69);
+            this.soyadTxt.BackColor = System.Drawing.SystemColors.Window;
+            this.soyadTxt.Location = new System.Drawing.Point(104, 97);
             this.soyadTxt.Name = "soyadTxt";
-            this.soyadTxt.Size = new System.Drawing.Size(220, 22);
+            this.soyadTxt.Size = new System.Drawing.Size(301, 22);
             this.soyadTxt.TabIndex = 18;
             // 
             // SignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Gainsboro;
             this.Controls.Add(this.soyadTxt);
             this.Controls.Add(this.adTxt);
             this.Controls.Add(this.SoyadBtn);
@@ -153,7 +169,7 @@
             this.Controls.Add(this.password2Btn);
             this.Controls.Add(this.email2Btn);
             this.Name = "SignUp";
-            this.Size = new System.Drawing.Size(559, 321);
+            this.Size = new System.Drawing.Size(601, 343);
             this.Load += new System.EventHandler(this.SignUp_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
