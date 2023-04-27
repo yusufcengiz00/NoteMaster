@@ -4,7 +4,7 @@ Kullanıcılar bu uygulamayı kullanarak not alabilir, notlarını kaydedebilir 
 
 # Proje Bağımlılıkları:
 - FirebaseAuthentication.net
-İlgili bağımlılıklara aşağıdaki bağlantıdan ulaşabilirsiniz.
+/İlgili bağımlılıklara bağlantıdan ulaşabilirsiniz:
 https://github.com/step-up-labs/firebase-authentication-dotnet
 
 
