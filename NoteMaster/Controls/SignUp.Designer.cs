@@ -45,9 +45,9 @@
             this.SignUpBtn.BackColor = System.Drawing.SystemColors.Info;
             this.SignUpBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.SignUpBtn.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SignUpBtn.Location = new System.Drawing.Point(282, 181);
+            this.SignUpBtn.Location = new System.Drawing.Point(285, 193);
             this.SignUpBtn.Name = "SignUpBtn";
-            this.SignUpBtn.Size = new System.Drawing.Size(120, 32);
+            this.SignUpBtn.Size = new System.Drawing.Size(120, 44);
             this.SignUpBtn.TabIndex = 11;
             this.SignUpBtn.Text = "Üye Ol";
             this.SignUpBtn.UseVisualStyleBackColor = false;
@@ -90,7 +90,7 @@
             // password2Btn
             // 
             this.password2Btn.AutoSize = true;
-            this.password2Btn.BackColor = System.Drawing.SystemColors.Window;
+            this.password2Btn.BackColor = System.Drawing.Color.Gainsboro;
             this.password2Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.password2Btn.Location = new System.Drawing.Point(33, 157);
             this.password2Btn.Name = "password2Btn";
@@ -102,7 +102,7 @@
             // email2Btn
             // 
             this.email2Btn.AutoSize = true;
-            this.email2Btn.BackColor = System.Drawing.SystemColors.Window;
+            this.email2Btn.BackColor = System.Drawing.Color.Gainsboro;
             this.email2Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.email2Btn.Location = new System.Drawing.Point(21, 126);
             this.email2Btn.Name = "email2Btn";
@@ -113,7 +113,7 @@
             // AdBtn
             // 
             this.AdBtn.AutoSize = true;
-            this.AdBtn.BackColor = System.Drawing.SystemColors.Window;
+            this.AdBtn.BackColor = System.Drawing.Color.Gainsboro;
             this.AdBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.AdBtn.Location = new System.Drawing.Point(49, 69);
             this.AdBtn.Name = "AdBtn";
@@ -125,7 +125,7 @@
             // SoyadBtn
             // 
             this.SoyadBtn.AutoSize = true;
-            this.SoyadBtn.BackColor = System.Drawing.SystemColors.Window;
+            this.SoyadBtn.BackColor = System.Drawing.Color.Gainsboro;
             this.SoyadBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.SoyadBtn.Location = new System.Drawing.Point(21, 97);
             this.SoyadBtn.Name = "SoyadBtn";
