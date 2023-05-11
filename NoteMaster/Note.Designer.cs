@@ -71,10 +71,10 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemkopyala = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripContainer1.BottomToolStripPanel.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
@@ -207,7 +207,7 @@
             this.yeniToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("yeniToolStripButton.Image")));
             this.yeniToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.yeniToolStripButton.Name = "yeniToolStripButton";
-            this.yeniToolStripButton.Size = new System.Drawing.Size(28, 22);
+            this.yeniToolStripButton.Size = new System.Drawing.Size(38, 22);
             this.yeniToolStripButton.Text = "Y&eni";
             this.yeniToolStripButton.Click += new System.EventHandler(this.yeniToolStripButton_Click);
             // 
@@ -218,7 +218,7 @@
             this.açToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("açToolStripButton.Image")));
             this.açToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.açToolStripButton.Name = "açToolStripButton";
-            this.açToolStripButton.Size = new System.Drawing.Size(28, 22);
+            this.açToolStripButton.Size = new System.Drawing.Size(38, 22);
             this.açToolStripButton.Text = "&Aç";
             this.açToolStripButton.Click += new System.EventHandler(this.açToolStripButton_Click);
             // 
@@ -229,19 +229,19 @@
             this.kaydetToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("kaydetToolStripButton.Image")));
             this.kaydetToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.kaydetToolStripButton.Name = "kaydetToolStripButton";
-            this.kaydetToolStripButton.Size = new System.Drawing.Size(28, 22);
+            this.kaydetToolStripButton.Size = new System.Drawing.Size(38, 22);
             this.kaydetToolStripButton.Text = "&Kaydet";
             this.kaydetToolStripButton.Click += new System.EventHandler(this.kaydetToolStripButton_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(28, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(38, 6);
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(28, 6);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(38, 6);
             // 
             // menuStrip1
             // 
@@ -278,7 +278,7 @@
             this.yeniToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("yeniToolStripMenuItem.Image")));
             this.yeniToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.yeniToolStripMenuItem.Name = "yeniToolStripMenuItem";
-            this.yeniToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.yeniToolStripMenuItem.Size = new System.Drawing.Size(207, 26);
             this.yeniToolStripMenuItem.Text = "Y&eni";
             this.yeniToolStripMenuItem.Click += new System.EventHandler(this.yeniToolStripMenuItem_Click);
             // 
@@ -288,14 +288,14 @@
             this.açToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("açToolStripMenuItem.Image")));
             this.açToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.açToolStripMenuItem.Name = "açToolStripMenuItem";
-            this.açToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.açToolStripMenuItem.Size = new System.Drawing.Size(207, 26);
             this.açToolStripMenuItem.Text = "&Aç";
             this.açToolStripMenuItem.Click += new System.EventHandler(this.açToolStripMenuItem_Click);
             // 
             // toolStripSeparator
             // 
             this.toolStripSeparator.Name = "toolStripSeparator";
-            this.toolStripSeparator.Size = new System.Drawing.Size(221, 6);
+            this.toolStripSeparator.Size = new System.Drawing.Size(204, 6);
             // 
             // kaydetToolStripMenuItem
             // 
@@ -303,7 +303,7 @@
             this.kaydetToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("kaydetToolStripMenuItem.Image")));
             this.kaydetToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.kaydetToolStripMenuItem.Name = "kaydetToolStripMenuItem";
-            this.kaydetToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.kaydetToolStripMenuItem.Size = new System.Drawing.Size(207, 26);
             this.kaydetToolStripMenuItem.Text = "&Kaydet";
             this.kaydetToolStripMenuItem.Click += new System.EventHandler(this.kaydetToolStripMenuItem_Click);
             // 
@@ -311,20 +311,20 @@
             // 
             this.farklıKaydetToolStripMenuItem.BackColor = System.Drawing.SystemColors.Window;
             this.farklıKaydetToolStripMenuItem.Name = "farklıKaydetToolStripMenuItem";
-            this.farklıKaydetToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.farklıKaydetToolStripMenuItem.Size = new System.Drawing.Size(207, 26);
             this.farklıKaydetToolStripMenuItem.Text = "&Farklı Kaydet";
             this.farklıKaydetToolStripMenuItem.Click += new System.EventHandler(this.farklıKaydetToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(221, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(204, 6);
             // 
             // çıkışToolStripMenuItem
             // 
             this.çıkışToolStripMenuItem.BackColor = System.Drawing.SystemColors.Window;
             this.çıkışToolStripMenuItem.Name = "çıkışToolStripMenuItem";
-            this.çıkışToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.çıkışToolStripMenuItem.Size = new System.Drawing.Size(207, 26);
             this.çıkışToolStripMenuItem.Text = "Çı&kış";
             this.çıkışToolStripMenuItem.Click += new System.EventHandler(this.çıkışToolStripMenuItem_Click);
             // 
@@ -461,6 +461,13 @@
             this.contextMenuStrip1.Size = new System.Drawing.Size(159, 124);
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(158, 24);
+            this.toolStripMenuItem3.Text = "Geri Al";
+            this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
+            // 
             // toolStripMenuItemkopyala
             // 
             this.toolStripMenuItemkopyala.Name = "toolStripMenuItemkopyala";
@@ -482,13 +489,6 @@
             this.toolStripMenuItem2.Text = "Kes";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
-            // toolStripMenuItem3
-            // 
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(158, 24);
-            this.toolStripMenuItem3.Text = "Geri Al";
-            this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
-            // 
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
@@ -506,6 +506,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Note";
             this.Text = "NoteMaster";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Note_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.toolStripContainer1.BottomToolStripPanel.ResumeLayout(false);
             this.toolStripContainer1.BottomToolStripPanel.PerformLayout();

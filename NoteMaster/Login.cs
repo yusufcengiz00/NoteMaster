@@ -74,9 +74,12 @@ namespace NoteMaster
       
             try
             {
+               
                 UserCredential userCredential = await client.SignInWithEmailAndPasswordAsync(this.loginUC.emailTxt.Text.Trim(), this.loginUC.passwordTxt.Text.Trim());
-                // MessageBox.Show("Giriş Başarılı!");
-                Note form1 = new Note();
+
+                this.Hide();
+            
+                Note form1 = new Note(userCredential);
                 form1.Show();
 
             }
