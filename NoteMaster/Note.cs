@@ -15,7 +15,7 @@ using System.Windows.Forms;
 
 namespace NoteMaster
 {
-   
+
     public partial class Note : Form
     {
 
@@ -26,7 +26,7 @@ namespace NoteMaster
         {
             InitializeComponent();
             this.userCredential = userCredential;
-            this.Text = this.Text + " | "+ userCredential.User.Info.Email;
+            this.Text = this.Text + " | " + userCredential.User.Info.Email;
 
             firebaseClient = new FirebaseClient("https://notemaster-939e5-default-rtdb.firebaseio.com/",
                    new FirebaseOptions
@@ -34,25 +34,28 @@ namespace NoteMaster
                        AuthTokenAsyncFactory = () => userCredential.User.GetIdTokenAsync()
                    });
         }
-       
-        private void sekmeEkle()
+        private void YeniSayfaOlustur()
         {
-           RichTextBox body = new RichTextBox();
-           body.Name = "Body";
-           body.Dock = DockStyle.Fill;
-           body.ContextMenuStrip = contextMenuStrip1;
+            // Yeni bir RichTextBox nesnesi oluşturmak
+            RichTextBox newRichTextBox = new RichTextBox();
+            newRichTextBox.Name = "Body";
+            newRichTextBox.Dock = DockStyle.Fill;
+            newRichTextBox.ContextMenuStrip = contextMenuStrip1;
 
-           TabPage NewPage = new TabPage();
-           sekmeSayısı += 1;
+            // Yeni bir TabPage nesnesi oluşturmak
+            TabPage newTabPage = new TabPage();
+            sekmeSayısı += 1;
 
-            string documentText = "Sayfa " + sekmeSayısı;
-            NewPage.Name = documentText;
-            NewPage.Text = documentText;
-            NewPage.Controls.Add(body);
+            string documentText = "Sayfa" + sekmeSayısı;
+            newTabPage.Name = "DocumentText";
+            newTabPage.Text = documentText;
 
-            tabControl2.TabPages.Add(NewPage);
+            // TabPage nesnesinin Controls koleksiyonuna RichTextBox nesnesi eklemek
+            newTabPage.Controls.Add(newRichTextBox);
+            // TabControl nesnesine yeni sekme eklemek
+            tabControl2.TabPages.Add(newTabPage);
         }
-         
+ 
         private void sekmeKapat()
         {
             if (tabControl2.TabPages.Count > 1)
@@ -63,90 +66,53 @@ namespace NoteMaster
             else
             {
                 tabControl2.TabPages.Remove(tabControl2.SelectedTab);
-                sekmeEkle();
+                YeniSayfaOlustur();
             }
         }
+        private async void belgeAç()
+        {
+            /* openFileDialog1.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+             openFileDialog1.Filter = "Pdf Dosyası|*.pdf|Text dosyası|*.txt|Tüm Dosyalar|*.*";
+             if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+             {
+                 if (openFileDialog1.FileName.Length > 0)
+                 {
+                     getCurrentDocument.LoadFile(openFileDialog1.FileName, RichTextBoxStreamType.PlainText);
+                 }
+             }*/
 
-      private async void kaydet()
-        {
-          //  await firebaseClient.Child("Sayfalar").Child(textBox1.Text);
+        }
+       
 
-           // MessageBox.Show("Notlarınız kaydedildi.");
-        }
-      /*  private void farklıKaydet()
-        {
-            saveFileDialog1.FileName = tabControl2.SelectedTab.Name;
-            saveFileDialog1.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            saveFileDialog1.Filter = "Pdf dosyası|*.pdf |Tüm Dosyalar|*.*";
-            saveFileDialog1.Title = "Farklı Kaydet";
-            if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            {
-                if (saveFileDialog1.FileName.Length > 0)
-                {
-                    getCurrentDocument.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.PlainText);
-                }
-            }
-        }*/
-        private void belgeAç()
-        {
-            openFileDialog1.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            openFileDialog1.Filter = "Pdf Dosyası|*.pdf|Text dosyası|*.txt|Tüm Dosyalar|*.*";
-            if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            {
-                if (openFileDialog1.FileName.Length > 0)
-                {
-                    getCurrentDocument.LoadFile(openFileDialog1.FileName, RichTextBoxStreamType.PlainText);
-                }
-            }
-        }
-        
         private RichTextBox getCurrentDocument // Aktif belgeyi almak
         {
             get { return (RichTextBox)tabControl2.SelectedTab.Controls["Body"]; }
         }
-        
+
         private void Form1_Load(object sender, EventArgs e)
         {
-           
+
         }
 
         private void yeniToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            sekmeEkle();
+            YeniSayfaOlustur();
         }
 
-        private async void kaydetToolStripMenuItem_Click(object sender, EventArgs e)
+        private async void açToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-            // Tüm sayfaların içeriğini toplamak için bir StringBuilder kullanın
-            StringBuilder builder = new StringBuilder();
-
-            // Tüm sayfaları dolaşın ve içeriklerini StringBuilder'a ekleyin
-            foreach (TabPage tabPage in tabControl1.TabPages)
-            {
-                TextBox textBox = (TextBox)tabPage.Controls["textBox1"];
-                builder.Append(textBox.Text);
-            }
-
-            // Firebase Realtime Database'de /Notlarınız/sayfalar yolunda veri kaydedin
-            await firebaseClient.Child("Notlarınız").Child("sayfalar").PutAsync<string>(builder.ToString());
-       
-    }
-
-        private void açToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            belgeAç();
+            
         }
 
         private void farklıKaydetToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           // farklıKaydet();
+            // farklıKaydet();
         }
 
-        private async void yeniToolStripButton_Click(object sender, EventArgs e)
+        private void yeniToolStripButton_Click(object sender, EventArgs e)
         {
-           sekmeEkle();
-           
+            YeniSayfaOlustur();
+
         }
 
         private void removeToolStripButton1_Click(object sender, EventArgs e)
@@ -154,28 +120,28 @@ namespace NoteMaster
             sekmeKapat();
         }
 
-        private void açToolStripButton_Click(object sender, EventArgs e)
+        private async void açToolStripButton_Click(object sender, EventArgs e)
         {
-            belgeAç();
+            
+        }
+
+        private async void kaydetToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string documentText = "Sayfa" + sekmeSayısı;
+
+            // Firebase Realtime Database'de /Notlarınız/Sayfa yolunda veri kaydet
+            await firebaseClient.Child("Notlarınız").Child("Sayfa").PutAsync<string>(documentText);
+            
         }
 
         private async void kaydetToolStripButton_Click(object sender, EventArgs e)
         {
-            // Tüm sayfaların içeriğini toplamak için bir StringBuilder kullanın
-            StringBuilder builder = new StringBuilder();
-
-            // Tüm sayfaları dolaşın ve içeriklerini StringBuilder'a ekleyin
-            foreach (TabPage tabPage in tabControl1.TabPages)
-            {
-                TextBox textBox = (TextBox)tabPage.Controls["textBox1"];
-                builder.Append(textBox.Text);
-            }
-
-            // Firebase Realtime Database'de /Notlarınız/sayfalar yolunda veri kaydedin
-            await firebaseClient.Child("Notlarınız").Child("sayfalar").PutAsync<string>(builder.ToString());
-        
-
-    }
+            string documentText = "Sayfa" + sekmeSayısı;
+   
+            // Firebase Realtime Database'de /Notlarınız/Sayfa yolunda veri kaydet
+            await firebaseClient.Child("Notlarınız").Child("Sayfa").PutAsync<string>(documentText);
+          
+        }
         private void toolStripButtonIncrease_Click(object sender, EventArgs e)
         {
             float NewFontSize = getCurrentDocument.SelectionFont.SizeInPoints + 1;
@@ -191,7 +157,7 @@ namespace NoteMaster
             if (result == DialogResult.Yes)
             {
                 // Mevcut sayfayı kaydet
-                kaydet();
+                // kaydet();
 
                 // Uygulamadan çık
                 Application.Exit();
@@ -201,7 +167,7 @@ namespace NoteMaster
                 // Uygulamadan çık
                 Application.Exit();
             }
-           
+
         }
 
         private void toolStripButtonDecrease_Click(object sender, EventArgs e)
@@ -255,5 +221,9 @@ namespace NoteMaster
         {
             Application.Exit();
         }
+
+
     }
+
+    
 }

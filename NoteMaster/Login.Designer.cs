@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panel1 = new System.Windows.Forms.Panel();
             this.importloginBtn = new System.Windows.Forms.Button();
             this.importsignupBtn = new System.Windows.Forms.Button();
@@ -80,7 +81,10 @@
             this.Controls.Add(this.importloginBtn);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimizeBox = false;
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NoteMaster";
             this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);

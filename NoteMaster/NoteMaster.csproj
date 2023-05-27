@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>25310741-notepad-icon-vector-metal-app-button.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Firebase, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\FirebaseDatabase.net.4.2.0\lib\netstandard2.0\Firebase.dll</HintPath>
@@ -221,6 +224,12 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="openWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="openWindow.Designer.cs">
+      <DependentUpon>openWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Controls\LoginUC.resx">
@@ -234,6 +243,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="openWindow.resx">
+      <DependentUpon>openWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -259,6 +271,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="25310741-notepad-icon-vector-metal-app-button.ico" />
     <Content Include="config.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

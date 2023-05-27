@@ -33,7 +33,7 @@
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tabControl2 = new System.Windows.Forms.TabControl();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox = new System.Windows.Forms.TextBox();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -99,10 +99,10 @@
             this.toolStripContainer1.ContentPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.toolStripContainer1.ContentPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.toolStripContainer1.ContentPanel.Controls.Add(this.tabControl2);
-            this.toolStripContainer1.ContentPanel.Controls.Add(this.textBox1);
+            this.toolStripContainer1.ContentPanel.Controls.Add(this.textBox);
             this.toolStripContainer1.ContentPanel.Controls.Add(this.tabControl);
             this.toolStripContainer1.ContentPanel.Controls.Add(this.tabControl1);
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(770, 365);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(760, 365);
             this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             // 
             // toolStripContainer1.LeftToolStripPanel
@@ -139,19 +139,19 @@
             this.tabControl2.Location = new System.Drawing.Point(0, 0);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(768, 363);
+            this.tabControl2.Size = new System.Drawing.Size(758, 363);
             this.tabControl2.TabIndex = 3;
             // 
-            // textBox1
+            // textBox
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox1.Location = new System.Drawing.Point(0, 0);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(768, 363);
-            this.textBox1.TabIndex = 2;
+            this.textBox.BackColor = System.Drawing.SystemColors.Window;
+            this.textBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textBox.Location = new System.Drawing.Point(0, 0);
+            this.textBox.Multiline = true;
+            this.textBox.Name = "textBox";
+            this.textBox.Size = new System.Drawing.Size(758, 363);
+            this.textBox.TabIndex = 2;
             // 
             // tabControl
             // 
@@ -159,7 +159,7 @@
             this.tabControl.Location = new System.Drawing.Point(0, 0);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(768, 363);
+            this.tabControl.Size = new System.Drawing.Size(758, 363);
             this.tabControl.TabIndex = 1;
             // 
             // tabControl1
@@ -168,7 +168,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(768, 363);
+            this.tabControl1.Size = new System.Drawing.Size(758, 363);
             this.tabControl1.TabIndex = 0;
             // 
             // toolStrip1
@@ -185,7 +185,7 @@
             this.toolStripSeparator6});
             this.toolStrip1.Location = new System.Drawing.Point(0, 4);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(30, 124);
+            this.toolStrip1.Size = new System.Drawing.Size(40, 148);
             this.toolStrip1.TabIndex = 0;
             // 
             // removeToolStripButton1
@@ -196,7 +196,7 @@
             this.removeToolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("removeToolStripButton1.Image")));
             this.removeToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.removeToolStripButton1.Name = "removeToolStripButton1";
-            this.removeToolStripButton1.Size = new System.Drawing.Size(28, 32);
+            this.removeToolStripButton1.Size = new System.Drawing.Size(38, 32);
             this.removeToolStripButton1.Text = "X";
             this.removeToolStripButton1.Click += new System.EventHandler(this.removeToolStripButton1_Click);
             // 
@@ -503,9 +503,11 @@
             this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.toolStripContainer1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Note";
             this.Text = "NoteMaster";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Note_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.toolStripContainer1.BottomToolStripPanel.ResumeLayout(false);
@@ -562,7 +564,7 @@
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabControl tabControl;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox;
         private System.Windows.Forms.TabControl tabControl2;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton removeToolStripButton1;
