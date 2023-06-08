@@ -69,21 +69,7 @@ namespace NoteMaster
                 YeniSayfaOlustur();
             }
         }
-        private async void belgeAç()
-        {
-            /* openFileDialog1.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-             openFileDialog1.Filter = "Pdf Dosyası|*.pdf|Text dosyası|*.txt|Tüm Dosyalar|*.*";
-             if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-             {
-                 if (openFileDialog1.FileName.Length > 0)
-                 {
-                     getCurrentDocument.LoadFile(openFileDialog1.FileName, RichTextBoxStreamType.PlainText);
-                 }
-             }*/
-
-        }
-       
-
+ 
         private RichTextBox getCurrentDocument // Aktif belgeyi almak
         {
             get { return (RichTextBox)tabControl2.SelectedTab.Controls["Body"]; }
@@ -101,7 +87,11 @@ namespace NoteMaster
 
         private async void açToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            // Yeni bir OpenWindow form örneği oluştursun
+            openWindow formx = new openWindow();
+
+            // Oluşturulan formu açsın
+            formx.Show();
         }
 
         private void farklıKaydetToolStripMenuItem_Click(object sender, EventArgs e)
@@ -122,7 +112,11 @@ namespace NoteMaster
 
         private async void açToolStripButton_Click(object sender, EventArgs e)
         {
-            
+            // Yeni bir OpenWindow form örneği oluştursun
+            openWindow formx = new openWindow();
+
+            // Oluşturulan formu açsın
+            formx.Show();
         }
 
         private async void kaydetToolStripMenuItem_Click(object sender, EventArgs e)
