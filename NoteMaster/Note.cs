@@ -19,7 +19,7 @@ namespace NoteMaster
     public partial class Note : Form
     {
 
-        private int sekmeSayısı = 0;
+        public int sekmeSayısı = 0;
         private UserCredential userCredential;
         private FirebaseClient firebaseClient;
         public Note(UserCredential userCredential)
@@ -34,7 +34,7 @@ namespace NoteMaster
                        AuthTokenAsyncFactory = () => userCredential.User.GetIdTokenAsync()
                    });
         }
-        private void YeniSayfaOlustur()
+        public void YeniSayfaOlustur()
         {
             // Yeni bir RichTextBox nesnesi oluşturmak
             RichTextBox newRichTextBox = new RichTextBox();
@@ -55,7 +55,19 @@ namespace NoteMaster
             // TabControl nesnesine yeni sekme eklemek
             tabControl2.TabPages.Add(newTabPage);
         }
- 
+        public void sayfaIcerik()
+        {
+            // Aktif sekme üzerindeki RichTextBox kontrolünü bulma
+            RichTextBox activeRichTextBox = tabControl2.SelectedTab.Controls.OfType<RichTextBox>().FirstOrDefault();
+
+            if (activeRichTextBox != null)
+            {
+                string pageText = activeRichTextBox.Text;
+                MessageBox.Show(pageText); // Sayfa metnini gösterme
+            }
+        }
+
+     
         private void sekmeKapat()
         {
             if (tabControl2.TabPages.Count > 1)
@@ -70,7 +82,7 @@ namespace NoteMaster
             }
         }
  
-        private RichTextBox getCurrentDocument // Aktif belgeyi almak
+        public RichTextBox getCurrentDocument // Aktif belgeyi almak
         {
             get { return (RichTextBox)tabControl2.SelectedTab.Controls["Body"]; }
         }
@@ -87,11 +99,8 @@ namespace NoteMaster
 
         private async void açToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Yeni bir OpenWindow form örneği oluştursun
-            openWindow formx = new openWindow();
-
-            // Oluşturulan formu açsın
-            formx.Show();
+            openWindow openWindowForm = new openWindow(this);
+            openWindowForm.Show();
         }
 
         private void farklıKaydetToolStripMenuItem_Click(object sender, EventArgs e)
@@ -112,11 +121,8 @@ namespace NoteMaster
 
         private async void açToolStripButton_Click(object sender, EventArgs e)
         {
-            // Yeni bir OpenWindow form örneği oluştursun
-            openWindow formx = new openWindow();
-
-            // Oluşturulan formu açsın
-            formx.Show();
+            openWindow openWindowForm = new openWindow(this);
+            openWindowForm.Show();
         }
 
         private async void kaydetToolStripMenuItem_Click(object sender, EventArgs e)

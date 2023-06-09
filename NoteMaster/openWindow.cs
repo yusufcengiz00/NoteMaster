@@ -12,14 +12,32 @@ namespace NoteMaster
 {
     public partial class openWindow : Form
     {
-        public openWindow()
+
+        private Note noteForm;
+
+        public openWindow(Note noteForm)
         {
             InitializeComponent();
+            this.noteForm = noteForm;
         }
+
 
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
+
+       
+        private void Açbutton1_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            noteForm.sayfaIcerik(); // Note formuna ait bir metodu çağırma
+        }
     }
+
+
 }
