@@ -55,8 +55,13 @@ namespace NoteMaster
             // TabControl nesnesine yeni sekme eklemek
             tabControl2.TabPages.Add(newTabPage);
         }
+        private bool kaydedildi = false;
+        private openWindow openWindow; // OpenWindow penceresine erişim sağlayacak bir nesne tanımlayın
         public void sayfaIcerik()
         {
+            if (!kaydedildi) // Kaydedilmediyse metodu çalıştırmayın
+                return;
+
             // Aktif sekme üzerindeki RichTextBox kontrolünü bulma
             RichTextBox activeRichTextBox = tabControl2.SelectedTab.Controls.OfType<RichTextBox>().FirstOrDefault();
 
@@ -67,7 +72,7 @@ namespace NoteMaster
             }
         }
 
-     
+
         private void sekmeKapat()
         {
             if (tabControl2.TabPages.Count > 1)
@@ -131,7 +136,7 @@ namespace NoteMaster
 
             // Firebase Realtime Database'de /Notlarınız/Sayfa yolunda veri kaydet
             await firebaseClient.Child("Notlarınız").Child("Sayfa").PutAsync<string>(documentText);
-            
+            kaydedildi = true; // Kaydedildiği durumu true olarak ayarlayın
         }
 
         private async void kaydetToolStripButton_Click(object sender, EventArgs e)
@@ -140,7 +145,7 @@ namespace NoteMaster
    
             // Firebase Realtime Database'de /Notlarınız/Sayfa yolunda veri kaydet
             await firebaseClient.Child("Notlarınız").Child("Sayfa").PutAsync<string>(documentText);
-          
+            kaydedildi = true; // Kaydedildiği durumu true olarak ayarlayın
         }
         private void toolStripButtonIncrease_Click(object sender, EventArgs e)
         {

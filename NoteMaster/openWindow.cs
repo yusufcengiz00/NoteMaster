@@ -12,7 +12,7 @@ namespace NoteMaster
 {
     public partial class openWindow : Form
     {
-
+      
         private Note noteForm;
 
         public openWindow(Note noteForm)
