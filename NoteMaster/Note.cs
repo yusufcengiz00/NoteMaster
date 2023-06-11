@@ -18,10 +18,12 @@ namespace NoteMaster
 
     public partial class Note : Form
     {
-
+        private bool kaydedildi = false;
+        private openWindow openWindow; // OpenWindow penceresine erişim sağlayacak bir nesne tanımlayın
         public int sekmeSayısı = 0;
         private UserCredential userCredential;
         private FirebaseClient firebaseClient;
+
         public Note(UserCredential userCredential)
         {
             InitializeComponent();
@@ -55,8 +57,7 @@ namespace NoteMaster
             // TabControl nesnesine yeni sekme eklemek
             tabControl2.TabPages.Add(newTabPage);
         }
-        private bool kaydedildi = false;
-        private openWindow openWindow; // OpenWindow penceresine erişim sağlayacak bir nesne tanımlayın
+        
         public void sayfaIcerik()
         {
             if (!kaydedildi) // Kaydedilmediyse metodu çalıştırmayın
@@ -68,12 +69,15 @@ namespace NoteMaster
             if (activeRichTextBox != null)
             {
                 string pageText = activeRichTextBox.Text;
+                
+
+                string documentText = "Sayfa " + sekmeSayısı;
+                MessageBox.Show(documentText);
                 MessageBox.Show(pageText); // Sayfa metnini gösterme
             }
         }
 
-
-        private void sekmeKapat()
+        public void sekmeKapat()
         {
             if (tabControl2.TabPages.Count > 1)
             {
@@ -108,11 +112,6 @@ namespace NoteMaster
             openWindowForm.Show();
         }
 
-        private void farklıKaydetToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            // farklıKaydet();
-        }
-
         private void yeniToolStripButton_Click(object sender, EventArgs e)
         {
             YeniSayfaOlustur();
@@ -135,17 +134,17 @@ namespace NoteMaster
             string documentText = "Sayfa" + sekmeSayısı;
 
             // Firebase Realtime Database'de /Notlarınız/Sayfa yolunda veri kaydet
-            await firebaseClient.Child("Notlarınız").Child("Sayfa").PutAsync<string>(documentText);
-            kaydedildi = true; // Kaydedildiği durumu true olarak ayarlayın
+            await firebaseClient.Child("Kaydedilenler").Child("Notlarınız: ").Child("Sayfa").PutAsync<string>(documentText);
+            kaydedildi = true; 
         }
 
         private async void kaydetToolStripButton_Click(object sender, EventArgs e)
         {
             string documentText = "Sayfa" + sekmeSayısı;
-   
+
             // Firebase Realtime Database'de /Notlarınız/Sayfa yolunda veri kaydet
-            await firebaseClient.Child("Notlarınız").Child("Sayfa").PutAsync<string>(documentText);
-            kaydedildi = true; // Kaydedildiği durumu true olarak ayarlayın
+            await firebaseClient.Child("Kaydedilenler").Child("Notlarınız: ").Child("Sayfa").PutAsync<string>(documentText);
+            kaydedildi = true; 
         }
         private void toolStripButtonIncrease_Click(object sender, EventArgs e)
         {
@@ -162,7 +161,7 @@ namespace NoteMaster
             if (result == DialogResult.Yes)
             {
                 // Mevcut sayfayı kaydet
-                // kaydet();
+                kaydedildi = true;
 
                 // Uygulamadan çık
                 Application.Exit();
